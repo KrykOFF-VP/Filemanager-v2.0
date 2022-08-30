@@ -1,6 +1,5 @@
 ﻿using Filemanager_v2.Commands.Base;
 namespace Filemanager_v2.Commands;
-
 public class MoveFileCommand:FileManagerCommand
 {
     private readonly IUserInterface _UserInterface;
