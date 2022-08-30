@@ -1,7 +1,6 @@
 ﻿using Filemanager_v2.Commands;
 using Filemanager_v2.Commands.Base;
 namespace Filemanager_v2.Commands.Base;
-
 public class QuitCommand : FileManagerCommand
 {
     private readonly FileManagerLogic _FileManager;

@@ -1,6 +1,5 @@
 ﻿using Filemanager_v2.Commands.Base;
 namespace Filemanager_v2.Commands;
-
 public class DeleteDirectoryCommand : FileManagerCommand
 {
     private readonly IUserInterface _UserInterface;
