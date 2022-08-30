@@ -19,16 +19,43 @@ public class FileManagerLogic
         var list_dir_command = new PrintDirectoryFilesCommand(UserInterface, this);
         var help_command = new HelpCommand(UserInterface, this);
         var quit_command = new QuitCommand(this);
+        var cd_command = new ChangeDirectoryCommand(UserInterface, this);
+        var mkdir_command = new CreateDirectoryCommand(UserInterface, this);
+        var touch_command = new CreateFileCommand(UserInterface, this);
+        var rd_command = new DeleteDirectoryCommand(UserInterface, this);
+        var del_command = new DeleteFileCommand(UserInterface, this);
+        var renamedir_command = new RenameDirectoryCommand(UserInterface, this);
+        var rename_command = new RenameFileCommand(UserInterface, this);
+        var cpdir_command = new CopyDirectoryCommand(UserInterface, this);
+        var cpfile_command = new CopyFileCommand(UserInterface, this);
+        var movedir_command = new MoveDirectoryCommand(UserInterface, this);
+        var movefile_command = new MoveFileCommand(UserInterface, this);
+        var search_command = new SearchCommand(UserInterface, this);
+        var clear_command = new ClearConsoleCommand(this);
+         var attr_command = new SetAttributeFileCommand(UserInterface, this);
+
         Commands = new Dictionary<string, FileManagerCommand>
         {
             {"drives", new ListDrivesCommand(UserInterface)},
             {"dir", list_dir_command },
             {"ListDir", list_dir_command },
             {"help", help_command },
-            {"?", help_command },
+            {"cd",cd_command },
+            {"mkdir",mkdir_command},
+            {"touch", touch_command},
+            {"rd", rd_command },
+            {"del", del_command },
+            {"renamedir",renamedir_command },
+            {"rename",rename_command },
+            {"cpdir", cpdir_command },
+            {"cpfile", cpfile_command},
+            {"movedir", movedir_command },
+            {"movefile", movefile_command },
+            {"search", search_command },
+            {"clear", clear_command },
+            {"attr", attr_command},
             {"quit",quit_command },
-            {"exit",quit_command },
-            {"cd",new ChangeDirectoryCommand(UserInterface,this) }
+            {"exit",quit_command }
 
         };
     }

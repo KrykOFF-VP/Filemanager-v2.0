@@ -5,5 +5,5 @@ var manager = new FileManagerLogic(console_ui);
 
 manager.Start();
 
-Console.WriteLine("Завершеною");
+Console.WriteLine("Завершено");
 Console.WriteLine();

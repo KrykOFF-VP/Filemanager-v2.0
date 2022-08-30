@@ -1,13 +1,11 @@
-﻿using Filemanager_v2.Commands;
-using Filemanager_v2.Commands.Base;
-
+﻿using Filemanager_v2.Commands.Base;
 namespace Filemanager_v2.Commands;
 public class ChangeDirectoryCommand : FileManagerCommand
 {
     private readonly IUserInterface _UserInterface;
     private readonly FileManagerLogic _FileManager;
     public override string Description => "Изменение текщего каталога";
-    public ChangeDirectoryCommand(IUserInterface UserInterface FileManagerLogic FileManager)
+    public ChangeDirectoryCommand(IUserInterface UserInterface, FileManagerLogic FileManager)
     {
         _UserInterface = UserInterface;
         _FileManager = FileManager;

@@ -23,4 +23,33 @@ public class ConsoleUserInterface : IUserInterface
         return Console.ReadLine()!;
 
     }
+
+    public double ReadDouble(string? Prompt, bool PromptNewLine = true)
+    {
+        bool success;
+        double value;
+        do
+        {
+            var input = Console.ReadLine();
+            success = double.TryParse(input, out value);
+            if (!success)
+                Console.WriteLine("Строка имела неверный формат");
+        } while (!success);
+        return value;
+
+    }
+    public int ReadInt(string? Prompt, bool PromptNewLine = true)
+    {
+        bool success;
+        int value;
+        do
+        {
+            var input = Console.ReadLine();
+            success = int.TryParse(input, out value);
+            if (!success)
+                Console.WriteLine("Строка имела неверный формат!");
+        } while (!success);
+        return value;
+    }
 }
+
